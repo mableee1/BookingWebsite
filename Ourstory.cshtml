@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Our story";
+}
+
+<!--intro - video, fixed nav, trip plan button-->
+<section id="story1">
+    <nav id="mainNavbar" class="navbar fixed-top navbar-expand-md bg-transparent px-5 py-4">
+        <div class="container-fluid px-0">
+            <button class="mx-3 navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-align-left"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link opt" aria-current="page" href="#story2">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opt" asp-controller="Home" asp-action="Tokyo">Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opt" asp-controller="Home" asp-action="Experience">Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opt" href="#contacts">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="plan_button" type="button" class="btn nav-link text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand fw-bold text-uppercase" asp-controller="Home" asp-action="Index">
+                HANAMI
+            </a>
+        </div>
+    </nav>
+    <div id="welcomeMessage" class="position-absolute">
+        <p class="fw-bold text-white text-uppercase header">our story</p>
+        <p class="fw-lighter text-white">success requires hard work and dedication</p>
+    </div>
+</section>
+<section id="story2">
+    <div id="story2-1" class="row justify-content-center justify-content-md-between align-items-center">
+        <div class="col-10 col-md-7 order-2 pb-3 pb-md-0">
+            <img src="~/images/ourstory/st2.jpg" class="img-fluid">
+        </div>
+        <div class="col-10 col-md-5 order-1 lh-lg text-center text-md-right pt-3 pt-0">
+            <h6 class="text-uppercase">history</h6>
+            <h1 class="fw-bold">Do it with passion or not at all</h1>
+            <p class="lh-lg fw-light">
+                The Hanami story is one of humble beginnings, dedication to a vision and an unyielding commitment
+                to automotive perfection.
+                The company was first found back in 1997 by one of our owners Ayumi Hamasaki.
+                Her idea was to provide people with solely exclusive Japanese experience.
+                Over the past years we've become more than just co-workers - we're a family that is dedicated to its creation.
+                The only story more exciting than where we’ve been is where we’re going in the future!
+            </p>
+        </div>
+    </div>
+</section>
+<section id="story3">
+    <div id="story3-1" class="row align-items-center justify-content-center justify-content-md-between">
+        <div class="col-10 col-md-7 order-2 pb-3 pb-md-0">
+            <img src="~/images/ourstory/st3.jpg" class="img-fluid">
+        </div>
+        <div class="col-10 col-md-5 order-1 lh-lg text-center text-md-right pt-3 pt-md-0">
+            <h6 class="text-uppercase">guiding principle</h6>
+            <h1 class="fw-bold">
+                Our environmental policy:
+            </h1>
+            <ul class="lh-lg list-unstyled fw-light">
+                <li>- Rainwater treatment plant</li>
+                <li>- No fossil fuels</li>
+                <li>- Use of bleach-free and eco-labeled cleaning products</li>
+                <li>- Lighting managed by home automation, low consumption leds</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section id="contacts" class="container-fluid">
+    <div class="col brand pb-5">
+        <h2 class="text-center">HANAMI | 月見</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">Regions</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a asp-controller="Home" asp-action="Tokyo">Tokyo</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">About</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a asp-controller="Home" asp-action="Ourstory">Our story</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">What to do in Japan</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a asp-controller="Home" asp-action="Experience">Experiences</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center">
+            <a id="plan_button2" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+        </div>
+        <div class="col-md text-center contacts">
+            +81 3-6252-1111
+            <address>Japan, 〒105-7227 Tokyo, Minato City, Higashishinbashi, 1 Chome−7−1</address>
+        </div>
+        <div></div>
+        <div class="col-md text-center copyright pt-4">
+            Credits: Kim N. A. | m1911511@edu.misis.ru<br>
+            Copyright © Hanami
+        </div>
+    </div>
+</section>
+<div class="cursor"></div>

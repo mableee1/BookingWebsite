@@ -1,0 +1,181 @@
+﻿@model PlanModel
+@{
+    ViewData["Title"] = "Book";
+}
+
+  <header id="plan1">
+        <nav id="mainNavbar" class="navbar fixed-top navbar-expand-md bg-transparent px-5 py-4">
+            <div class="container-fluid px-0">
+                <button class="mx-3 navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent"
+                        aria-label="Toggle navigation">
+                    <i class="fas fa-align-left"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link opt" aria-current="page" asp-controller="Home" asp-action="Ourstory">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link opt" asp-controller="Home" asp-action="Tokyo">Places</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link opt" asp-controller="Home" asp-action="Experience">Experiences</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link opt" href="#contacts">Contacts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="plan_button" class="btn nav-link text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="navbar-brand text-uppercase" asp-controller="Home" asp-action="Index">
+                    HANAMI
+                </a>
+            </div>
+        </nav>
+        <h3 class="text-center">To book your room, fill the form</h3>
+        <div class="row planForm justify-content-around">
+            <div class="col-md-7 col-12">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/images/plan/Standard.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Standard room</h5>
+                                <p>Some representative placeholder content for the first slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/plan/SuperiorDouble.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Superior Double room</h5>
+                                <p>Some representative placeholder content for the second slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/plan/SuperiorFamily.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Superior Family room</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/plan/Queen.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Queen room</h5>
+                                <p>Some representative placeholder content for the third slide.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="bg-transparent border-0 carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                    </button>
+                    <button class="bg-transparent border-0 carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-md-5 col-12">
+                <form action="mailto:natasha_kim5@yahoo.com?subject=Booking" enctype="text/plain" method="post">
+                    <div class="form-group">
+                        <label asp-for="Room"><h4>Room</h4></label>
+                        <select asp-for="Room" class="form-control">
+                            <option name="room" value="Standard">Standard</option>
+                            <option name="room" value="SuperiorDouble">Superior Double</option>
+                            <option name="room" value="SuperiorFamily">Superior Family</option>
+                            <option name="room" value="Queen">Queen</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="CheckIn"><h4>Check-in date</h4></label>
+                        <input asp-for="CheckIn" type="date" placeholder="yyyy-mm-dd" min="2021-06-07" max="2022-06-07" name="CheckIn" value="" /><br />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="CheckOut"><h4>Check-out date</h4></label>
+                        <input asp-for="CheckOut" type="date" placeholder="yyyy-mm-dd" id="checkout" min="2021-06-07" max="2022-06-07" name="CheckOut" value="" /><br />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="NumOfGuests"><h4>Number of guests</h4></label>
+                        <select asp-for="NumOfGuests" class="form-control" id="NumOfGuests">
+                            <option name="NumOfGuests" value="1">1</option>
+                            <option name="NumOfGuests" value="2">2</option>
+                            <option name="NumOfGuests" value="3">3</option>
+                            <option name="NumOfGuests"  value="4">4</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="FullName"><h4>Full Name</h4></label>
+                        <input asp-for="FullName" type="text" class="form-control" /><br />
+                    </div>
+
+                    <div class="form-group">                 
+                        <label asp-for="Email"><h4>E-mail</h4></label>
+                        <input asp-for="Email" type="email" class="form-control" /><br />
+                    </div>
+
+                    <button id="formButton" class="btn" type="submit">Book the room</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+<footer id="contacts" class="container-fluid">
+    <div class="col brand pb-5">
+        <h2 class="text-center">HANAMI | 月見</h2>
+    </div>
+    <div class="row justify-content-center">
+        <!--about-->
+        <div class="col-md text-center lin">
+            <!--regions-->
+            <p class="text-uppercase fw-bold">Regions</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a class="fw-lighter" asp-controller="Home" asp-action="Tokyo">Tokyo</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">About</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a class="fw-lighter" asp-controller="Home" asp-action="Ourstory">Our story</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">What to do in Japan</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a class="fw-lighter" asp-controller="Home" asp-action="Experience">Experiences</a>
+                    <!--experiences-->
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center pb-5">
+            <a id="plan_button2" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+        </div>
+        <div class="col-md fw-lighter text-center contacts">
+            <!--contacts-->
+            +81 3-6252-1111
+            <address>Japan, 〒105-7227 Tokyo, Minato City, Higashishinbashi, 1 Chome−7−1</address>
+        </div>
+        <hr class="mt-3">
+        <div class="col-md text-center copyright">
+            Credits: Kim N. A. | m1911511@edu.misis.ru<br>
+            Copyright © Hanami
+        </div>
+    </div>
+</footer>

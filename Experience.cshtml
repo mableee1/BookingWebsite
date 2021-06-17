@@ -1,0 +1,202 @@
+﻿@{
+    ViewData["Title"] = "Experience";
+}
+<section id="exp">
+    <nav id="mainNavbar" class="navbar fixed-top navbar-expand-md bg-transparent px-5 py-4">
+        <div class="container-fluid px-0">
+            <button class="mx-3 navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="#navbarSupportedContent"
+                    aria-label="Toggle navigation">
+                <i class="fas fa-align-left"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link opt" aria-current="page" asp-controller="Home" asp-action="Ourstory">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opt" asp-controller="Home" asp-action="Tokyo">Places</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opt" href="#exp">Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link opt" href="#contacts">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="plan_button" class="btn nav-link text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand text-uppercase fw-bold"  asp-controller="Home" asp-action="Index">
+                HANAMI
+            </a>
+        </div>
+    </nav>
+    <div id="welcomeMessage" class="position-absolute">
+        <p class="fw-bold text-white text-uppercase header">experiences</p>
+        <p class="fw-lighter text-white">
+            find
+            yourself in a truly memorable Japanese experience
+        </p>
+    </div>
+</section>
+
+<section id="exp1" class="row align-items-center">
+    <div id="carousel1" class="col-6 carousel slide carousel-fade align-self-stretch pe-0" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/experience/sakura1.jpg" alt="sakura1" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="~/images/experience/sakura2.jpg" alt="sakura2" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="~/images/experience/sakura3.jpg" alt="sakura3" class="vh-100 vw-50 d-block">
+            </div>
+        </div>
+    </div>
+    <div class="col-6 text-end lh-lg pe-4 ps-0">
+        <h1 class="fw-bold">Admire Sakura During Cherry Blossom Season</h1>
+        <p>
+            There is nevertheless something uniquely magical about Japan’s cherry blossom season. During hanami (cherry blossom viewing) season, the country is covered in pink blossoms, and parks and gardens are filled with revelers celebrating over sake and seasonal bentos.
+        </p>
+        <a id="plan_button" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+    </div>
+</section>
+<section id="exp2" class="row align-items-center">
+    <div id="carousel2" class="col-6 carousel slide carousel-fade align-self-stretch order-2 ps-0" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/experience/fuji1.jpg" alt="fuji1" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/fuji2.jpg" alt="fuji2" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/fuji3.jpg" alt="fuji3" class="vh-100 vw-50 d-block">
+            </div>
+        </div>
+    </div>
+    <div class="col-6 text-right lh-lg order-1 ps-4 pe-0">
+        <h1 class="fw-bold">Mountain Fuji</h1>
+        <p>
+            According to an old saying in Japan, there are two types of fools in the world: those who never climb Fuji-san, and those who climb it more than once. On the way up you’ll see children and grandparents, and while not the most scenic trek, it is all worthwhile when you reach the summit in time for sunrise.
+        </p>
+        <a id="plan_button" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+    </div>
+</section>
+<section id="exp3" class="row align-items-center">
+    <div id="carousel3" class="col-6 carousel slide carousel-fade align-self-stretch pe-0" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/experience/ramen1.jpg" alt="ramen1" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/ramen2.jpg" alt="ramen2" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/ramen3.jpg" alt="ramen3" class="vh-100 vw-50 d-block">
+            </div>
+        </div>
+    </div>
+    <div class="col-6 text-end lh-lg pe-4 ps-0">
+        <h1 class="fw-bold">Eat Authentic Japanese Ramen</h1>
+        <p>
+            These days you can find good-quality ramen in most major cities around the world, but there’s still nothing like ramen in Japan. Wherever you go – from Fukuoka in the west to Sapporo in the far north – you’ll find incredibly good ramen shops with passionately devoted followers.
+        </p>
+        <a id="plan_button" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+    </div>
+</section>
+<section id="exp4" class="row align-items-center">
+    <div id="carousel4" class="col-6 carousel slide carousel-fade align-self-stretch order-2 ps-0" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/experience/knife1.jpg" alt="knife1" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/knife2.jpg" alt="knife2" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/knife3.jpg" alt="knife3" class="vh-100 vw-50 d-block">
+            </div>
+        </div>
+    </div>
+    <div class="col-6 text-right lh-lg ps-4 pe-0 order-1">
+        <h1 class="fw-bold">Azuma Minamoto no Masahisa: Discover What Makes Japanese Knives so Sharp</h1>
+        <p>
+            Azuma Minamoto no Masahisa, or Masahisa in short, is a kitchen knife specialty shop in Tsukiji that dates back to 1872, famed for its kitchen knives of a quality so ridiculously high, numerous chefs swear by them. Masahisa’s traditional methods of bladesmithing are skillfully interwoven with the modern world, making for excellent hand-made Japanese kitchen knives.
+        </p>
+        <a id="plan_button" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+    </div>
+</section>
+<section id="exp5" class="row align-items-center">
+    <div id="carousel5" class="col-6 carousel slide carousel-fade align-self-stretch pe-0" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/experience/nara1.jpg" alt="nara1" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/nara2.jpg" alt="nara2" class="vh-100 vw-50 d-block">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/experience/nara3.jpg" alt="nara3" class="vh-100 vw-50 d-block">
+            </div>
+        </div>
+    </div>
+    <div class="col-6 text-end lh-lg pe-4">
+        <h1 class="fw-bold">Nara deer park</h1>
+        <p>
+            We tend to think of deer as timid, skittish creatures, shy little Bambis that will bolt at the sound of footsteps. Not so the bold deer of Nara. These creatures will come at you aggressively, like Tasmanian devils, if they think you have food.
+        </p>
+        <a id="plan_button" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+    </div>
+</section>
+
+<footer id="contacts" class="container-fluid">
+    <div class="col brand pb-5">
+        <h2 class="text-center">HANAMI | 月見</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">Regions</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a class="fw-lighter" asp-controller="Home" asp-action="Tokyo">Tokyo</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">About</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a class="fw-lighter" asp-controller="Home" asp-action="Ourstory">Our story</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center lin">
+            <p class="text-uppercase fw-bold">What to do in Japan</p>
+            <ul class="p-0 list-unstyled">
+                <li>
+                    <a href="#exp1" class="fw-lighter">Experiences</a>
+                    <!--experiences-->
+                </li>
+            </ul>
+        </div>
+        <div class="col-md text-center pb-5">
+            <a id="plan_button2" type="button" class="btn text-uppercase" asp-controller="Home" asp-action="Plan">Plan your trip</a>
+        </div>
+        <div class="col-md fw-lighter text-center contacts">
+            <!--contacts-->
+            +81 3-6252-1111
+            <address>Japan, 〒105-7227 Tokyo, Minato City, Higashishinbashi, 1 Chome−7−1</address>
+        </div>
+        <hr class="mt-3">
+        <div class="col-md text-center copyright">
+            Credits: Kim N. A. | m1911511@edu.misis.ru<br>
+            Copyright © Hanami
+        </div>
+    </div>
+    <!--all rights reserved-->
+</footer>
+<div class="cursor"></div>
